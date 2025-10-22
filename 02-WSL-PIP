@@ -1,0 +1,43 @@
+# if installed light ubuntu 
+wsl --unregister Ubuntu
+
+# install full wsl ubuntu 
+wsl --install -d Ubuntu
+
+# see wsl list of machines you have
+wsl -l 
+
+# choose ubuntu OS 
+wsl -d Ubuntu
+
+# install python on wsl environment
+sudo apt update && sudo apt install -y python3 python3-venv python3-pip
+
+
+# create new environment folder and point to her.
+python3 -m venv .venv
+source .venv/bin/activate
+deactivate
+
+# example for see pip - command install dependencies
+python3 -m venv .venv2
+source .venv2/bin/activate
+pip list
+pip install boto3
+pip -list
+
+
+# remove virtual folder environment
+rm -rf .venv2
+
+
+# install depenceies and output to requirement file and install like this versions 
+source .venv/bin/activate
+pip freeze
+pip install boto3
+pip freeze > requirement.txt
+deactivate
+rm -rf .venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirement.txt
