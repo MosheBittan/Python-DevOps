@@ -1,0 +1,14 @@
+List installed WSL distros:
+wsl --list --verbose
+
+Unregister (uninstall) Ubuntu:
+wsl --unregister Ubuntu
+
+Install Ubuntu (the default latest version):
+wsl --install -d Ubuntu
+
+Alternatively, choose a version (e.g., Ubuntu 22.04):
+wsl --install -d Ubuntu-22.04
+
+After installation, launch Ubuntu from Start Menu or with:
+wsl -d Ubuntu
