@@ -24,14 +24,18 @@ def sum_even(numbers: list)->int:
     Return:
         int: return sum numner of all even numbers in the lis t
     """
+    ##Option1##
     # sum variable to calculate summary of all even numbers
     sum = 0 
     for num in numbers:
         if(num%2 == 0):
             sum = sum + num
 
+    ##Option2##
+    # return sum(num for num in numbers if num%2==0)
     return sum
 
+    
 
 test_list = [1,2,3,4,5,6]
 print(sum_even(test_list))
