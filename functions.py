@@ -49,6 +49,7 @@ def fibonacci(n:int):
     Return:
         list(int): list of n numbers
     """
+    ## Option1 ##
     list_temp = [0,1,1]
     if n<=3 :
         return list_temp
@@ -59,6 +60,12 @@ def fibonacci(n:int):
         list_temp.append(int(list_temp[-1])+int(list_temp[-2]))
     
     return list_temp
+
+    ## Option 2 ##
+    # seq = [0,1]
+    # for _ in range(2,n):
+    #     seq.append(seq(-1) + seq[-2])
+    # return seq[:n]
 
 
 # test - build fibonacii with 3 numbers
