@@ -1,3 +1,21 @@
+import random
+def random_number(min_val, max_val):
+    """Generates an integer between min_val and max_val
+
+    Args:
+        min_val (int): The lower boundary of the interval
+        max_val (int): The max boundary of the interval
+
+    Returns:
+        int: The generated random number
+
+    """
+
+    return random.randint(min_val,max_val)
+
+generated_number = random_number(0,10)
+print(generated_number)
+
 def sum_even(numbers: list)->int:
     """Calculate the summary of even numbers from list on integers
     Args:
