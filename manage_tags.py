@@ -19,17 +19,15 @@ def manage_tags(existing_tags: dict, *simple_tags, **key_value_tags) -> dict:
     
     # TODO: Implement the tagging logic.
     # 1. Do not modify the original dictionary
-    new_tags = existing_tags.copy()
+    all_tags = existing_tags.copy()
     # 2. Process the 'simple_tags' (*args).
     #it will work without set but if you have million on simple_tags this will remove only to unique and then do the proccess which more fast and performance
-    for value in set(simple_tags)
-        new_tags.update({value:"true"})
+    for tag in set(simple_tags):
+        all_tags[tag] = 'true'
     # 3. Process the 'key_value_tags' (**kwargs).
-    new_tags.update(key_value_tags)
+    all_tags.update(key_value_tags)
     # 4. Return the new, merged dictionary.
-    return new_tags
-    
-
+    return all_tags
 
 initial = {'owner': 'dev-team', 'env': 'dev'}
 final_tags = manage_tags(
